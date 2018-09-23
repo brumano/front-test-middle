@@ -1,0 +1,133 @@
+@import "../_core/animated";
+@mixin set-button-color($background, $color, $hoverBg, $activeBg, $disableBg) {
+    background: $background;
+    color: $color;
+    svg {
+        path {
+            fill: $color;
+        }
+    }
+    &:hover,
+    &.hover {
+        background-color: $hoverBg;
+    }
+    &:active,
+    &.active {
+        background-color: $activeBg;
+    }
+    &.disabled, 
+    &:disabled {
+        background-color: $disableBg;
+    }
+}
+
+@mixin set-transparentButton-color($color, $hover, $active, $disable) {
+    background: transparent;
+    color: $color;
+    svg {
+        path {
+            fill: $color;
+        }
+    }
+    &:hover,
+    &.hover {
+        svg {
+            path {
+                fill: $hover;
+            }
+        }
+        color: $hover;
+    }
+    &:active,
+    &.active {
+        svg {
+            path {
+                fill: $active;
+            }
+        }
+        color: $active;
+    }
+    &.disabled, 
+    &:disabled {
+        svg {
+            path {
+                fill: $disable;
+            }
+        }
+        color: $disable;
+    }
+}
+
+
+.btn {
+        @include set-button-color(var(--pink-02), var(--white), var(--pink-03), var(--pink-03), var(--gray-02));
+        border: transparent;
+        font-size: var(--text-small);
+        border-radius: 1.7rem;
+        padding: 0.4rem 1.4rem;
+        font-size: var(--text-current);
+        &.btn-sm {
+            padding: 0.2rem 0.6rem;
+        }
+        &.btn-md {
+            padding: 0.6rem 1.0rem;
+        }
+        &.btn-lg {
+            padding: 1.0rem 1.4rem;
+        }
+        &.blue {
+            @include set-button-color(var(--blue-03), var(--white), var(--blue-04), var(--blue-04), var(--blue-02));
+        }
+    
+        &.opaque-blue {
+            @include set-button-color(var(--blue-02), var(--blue-04), var(--blue-03), var(--blue-03), var(--blue-01));
+        }
+        &.no-bg {
+            padding: 0;
+            @include set-transparentButton-color(var(--pink-02), var(--pink-03), var(--pink-03), var(--gray-02));
+            &.btn-sm {
+                padding: 0.2rem 0.6rem;
+                font-size: var(--text-tiny);
+            }
+            &.btn-md {
+                padding: 0.6rem 1.0rem;
+            }
+            &.btn-lg {
+                padding: 1.0rem 1.4rem;
+            }
+            &.-invert {
+                @include set-transparentButton-color(var(--gray-02), var(--pink-02), var(--pink-02), var(--gray-01));
+            }
+            &.blue {
+                @include set-transparentButton-color(var(--blue-03), var(--blue-04), var(--blue-04), var(--blue-01));
+            }
+        
+            &.opaque-blue {
+                @include set-transparentButton-color(var(--blue-02), var(--blue-03), var(--blue-03), var(--blue-01));
+            }
+        }
+    
+   
+}
+
+button,
+.btn {
+    &:focus,
+    &.focus {
+        outline: 0;
+        -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0);
+        box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0);
+    }
+}
+
+button {
+    &.btn {
+        @include animate-item();
+        svg {
+            @include animate-item();
+            path {
+                @include animate-item();
+            }
+        }
+    }
+}

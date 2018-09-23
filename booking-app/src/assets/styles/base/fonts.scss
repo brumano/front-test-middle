@@ -1,0 +1,21 @@
+
+@mixin fontFace($name, $weight, $style, $fileName){
+    font-family: $name;
+    src: url("fonts/montserrat/" + $fileName + '.woff2') format('woff2'),
+         url("fonts/montserrat/" + $fileName + '.woff') format('woff');
+    font-weight: $weight;
+    font-style: $style;
+}
+
+@font-face { @include fontFace('montserrat', bold,    normal, 'montserrat-bold-webfont' ); }
+@font-face { @include fontFace('montserrat', bold,    italic, 'montserrat-bolditalic-webfont' ); }
+@font-face { @include fontFace('montserrat', normal,  italic, 'montserrat-italic-webfont' ); }
+@font-face { @include fontFace('montserrat', 100,     normal, 'montserrat-light-webfont' ); }
+@font-face { @include fontFace('montserrat', 100,     italic, 'montserrat-lightitalic-webfont' ); }
+@font-face { @include fontFace('montserras', normal,  normal, 'montserrat-regular-webfont' ); }
+
+
+
+
+
+

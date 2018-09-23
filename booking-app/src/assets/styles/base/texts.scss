@@ -1,0 +1,28 @@
+
+@mixin fontSizes($size){
+    font-size: $size;
+    font-weight: bold;
+}
+
+h1{@include fontSizes(4.57rem);}
+h2{@include fontSizes(3.42rem);}
+h3{@include fontSizes(2.28rem);}
+h4{@include fontSizes(1.71rem);}
+h5{@include fontSizes(1.28rem);}
+h6{@include fontSizes(var(--text-middle));}
+.txt-middle{@include fontSizes(var(--text-middle));}
+.txt-current{@include fontSizes(var(--text-current));}
+.txt-tiny{@include fontSizes(var(--text-tiny));}
+.txt-small{@include fontSizes(var(--text-small));}
+
+h1, h2, h3, h4, h5, h6,.txt-current,.txt-tiny,.txt-small{
+    &.light{
+        font-weight: lighter;
+    }
+    &.normal{
+        font-weight: normal;
+    }
+    &.italic{
+        font-style: italic;
+    }
+} 

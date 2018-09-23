@@ -1,0 +1,120 @@
+
+:root {
+    --black: #000;
+    --white: #fff;
+    --off-white-01: #efeff1;
+    --off-white-02: #F2FBFE;
+    --gray-01: #c0bebf;
+    --gray-02: #5a5d64;
+    --gray-03: #1d1f2b;
+    --gray-04: #13131f;
+    --blue-01: #BEF8F2;
+    --blue-02: #13E7D1;
+    --blue-03: #0B7E73;
+    --blue-04: #063F39;
+    --pink-01: #EBA7C9;
+    --pink-01: #DB5F9D;
+    --pink-02: #C12273;
+    --pink-03: #8D1954;
+    --red-01: #F67C5C;
+    --red-02: #DF4D2D;
+    --red-03: #AE371F;
+    --red-04: #8F2E1A;
+    --orange-01: #FFD868;
+    --orange-02: #FFB143;
+    --orange-03: #E4902C;
+    --orange-04: #A66921;
+    --green-01: #7CDF5E;
+    --green-02: #35BB2D;
+    --green-03: #2C7E21;
+    --green-04: #1D5115;
+    --text-small: 0.7rem;
+    --text-tiny: 0.85rem;
+    --text-current: 1rem;
+    --text-middle:  1.15rem; }
+  
+  *,
+  body {
+    font-family: montserrat;
+    font-weight: normal;
+    color: var(--gray-01); }
+  
+  body,
+  html,
+  #root {
+    font-size: 14px;
+    background-color: var(--gray-04);
+    width: 100%;
+    height: 100%;
+    width: 100%; }
+  
+  html {
+    position: relative; }
+  
+  ul,
+  li {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+  
+  a {
+    color: #4B4B4B; }
+    a:hover {
+      color: #C12273;
+      text-decoration: none; }
+  
+  .no-margin {
+    margin: 0 !important; }
+  
+  .no-padding {
+    padding: 0 !important; }
+  
+  .auto-margin {
+    margin: auto !important; }
+  
+  .full-height {
+    height: 100% !important; }
+  
+  .full-width {
+    width: 100% !important; }
+  
+  .full-max-width {
+    max-width: 100% !important; }
+  
+  .auto-height {
+    height: auto !important; }
+  
+  .auto-width {
+    width: auto !important; }
+  
+  .auto-max-width {
+    max-width: auto !important; }
+  
+  .transparency {
+    opacity: 0 !important; }
+  
+  .no-transparency {
+    opacity: 1 !important; }
+  
+  .no-border {
+    border-color: transparent !important; }
+  
+  .noresize {
+    resize: none !important; }
+  
+  .vresize {
+    resize: vertical !important; }
+  
+  .hresize {
+    resize: horizontal !important; }
+  
+  :focus {
+    outline: transparent; }
+  
+  .between-justifyed {
+    justify-content: space-between !important; }
+  
+  .text-wrap {
+    word-wrap: break-word;
+    white-space: normal; }
+  
