@@ -20,26 +20,26 @@ class Menu extends Component {
         <div className="menu-holder">
       
             <div className="menu-navigation-itens ">
-                <button className="btn btn-lg no-bg no-padding -invert">
+                <button className="btn btn-lg no-bg no-padding ">
                     <span className="svg-icon-base ">
                         <TravellingIcon/>
                     </span>
                     Book Flights
                     
                 </button>
-                <button className="btn btn-lg no-bg svg-icon sm no-padding -invert">
+                <button className="btn btn-lg no-bg svg-icon sm no-padding ">
                     <span className="svg-icon-base">
                         <MapsIcon/>
                     </span>
                     Map View
                 </button>
-                <button className="btn btn-lg no-bg svg-icon sm no-padding -invert">
+                <button className="btn btn-lg no-bg svg-icon sm no-padding ">
                     <span className="svg-icon-base ">
                         <TargetIcon/>
                     </span>
                     Flight Status
                 </button>
-                <button className="btn btn-lg no-bg svg-icon sm no-padding -invert">
+                <button className="btn btn-lg no-bg svg-icon sm no-padding ">
                     <span className="svg-icon-base">
                         <BagIcon/>
                     </span>

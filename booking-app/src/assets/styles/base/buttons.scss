@@ -74,11 +74,8 @@
        
         &.no-bg {
             padding: 0;
-            @include set-transparentButton-color(var(--pink-02), var(--pink-03), var(--pink-03), var(--gray-02));
+            @include set-transparentButton-color(var(--gray-02), var(--pink-02), var(--pink-02), var(--gray-01));
           
-            &.-invert {
-                @include set-transparentButton-color(var(--gray-02), var(--pink-02), var(--pink-02), var(--gray-01));
-            }
           
         }
     
