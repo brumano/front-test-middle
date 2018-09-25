@@ -8,7 +8,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    
+    z-index: 3;
     .menu-navigation-itens {
         display: flex;
         align-items: flex-start;
@@ -19,18 +19,99 @@
             .svg-icon-base{
                 margin: 1rem;
             }
-
             &:hover {
-                font-weight: bold;
-                font-size: 16px;
+                >.text{
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+                
             }
+
+            
         }
     }
    
-   
+    @media (max-width: 58rem) {
+        width: 200px;
+    }
+
+    @media (max-width: 50rem) {
+        width: 100px;
+        align-items: center;
+        .menu-navigation-itens {
+            justify-content: center;
+            align-items: center;
+            .btn {
+                .svg-icon-base{
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    svg{
+                        width: 2.5rem;
+                        height: 2.5rem;
+                    }
+                }
+                .text{
+                    transform: scale(0);
+                    opacity: 0;
+                    width: 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 40rem) {
+       
+        left: -10rem;
+        animation: hideMenuOnLeft 0.3s linear 1s;
+        padding: 0px;
+       
+        .menu-navigation-itens {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            align-items: flex-start;
+            .btn {
+                flex-direction: column;
+                .svg-icon-base{
+                    
+                    margin: 0.8rem;
+                }
+                .text{
+                    transform: scale(1);
+                    opacity: 1;
+                    width: unset;
+                }
+
+                font-size: 16px;
+
+                &:hover {
+                    >.text{
+                        font-weight: unset;
+                        font-size: 16px;
+                    }
+                    
+                }
+            }
+        }
+    }
 }
 
 
 
-    
+@keyframes hideMenuOnLeft {
+    0%{
+        left: -10rem;
+        top: unset;
+        bottom: -10rem;
+        width: 100%;
+        height: 80px;
+    }
+    100%{
+        left: 0;
+        top: unset;
+        bottom: 0rem;
+        width: 100%;
+        height: 7rem;
+    }
+}
 

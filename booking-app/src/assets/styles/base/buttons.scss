@@ -2,6 +2,9 @@
 @mixin set-button-color($background, $color, $hoverBg, $activeBg, $disableBg) {
     background: $background;
     color: $color;
+    .text{
+        color: $color;
+    }
     svg {
         path, polygon {
             fill: $color;
@@ -24,6 +27,9 @@
 @mixin set-transparentButton-color($color, $hover, $active, $disable) {
     background: transparent;
     color: $color;
+    .text{
+        color: $color;
+    }
     svg {
         path, polygon {
             fill: $color;
@@ -37,6 +43,9 @@
             }
         }
         color: $hover;
+        .text{
+            color: $hover;
+        }
     }
     &:active,
     &.active {
@@ -46,6 +55,9 @@
             }
         }
         color: $active;
+        .text{
+            color: $active;
+        }
     }
     &.disabled, 
     &:disabled {
@@ -55,6 +67,9 @@
             }
         }
         color: $disable;
+        .text{
+            color: $disable;
+        }
     }
 }
 
@@ -74,7 +89,7 @@
        
         &.no-bg {
             padding: 0;
-            @include set-transparentButton-color(var(--gray-02), var(--pink-02), var(--pink-02), var(--gray-01));
+            @include set-transparentButton-color(var(--gray-02), var(--white), var(--white), var(--gray-01));
           
           
         }
@@ -97,7 +112,7 @@ button {
         @include animate-item();
         svg {
             @include animate-item();
-            path {
+            path, polygon {
                 @include animate-item();
             }
         }

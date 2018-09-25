@@ -17,33 +17,41 @@ class Menu extends Component {
 
     return (
       
-        <div className="menu-holder">
+        <div className="menu-holder animated">
       
             <div className="menu-navigation-itens ">
                 <button className="btn btn-lg no-bg no-padding ">
                     <span className="svg-icon-base ">
                         <TravellingIcon/>
                     </span>
-                    Book Flights
-                    
+                    <span className="text animated">Book Flights</span>
+                    <hr/>
                 </button>
                 <button className="btn btn-lg no-bg svg-icon sm no-padding ">
                     <span className="svg-icon-base">
                         <MapsIcon/>
                     </span>
-                    Map View
+                    <span className="text animated">
+                        Map View
+                    </span>
+
                 </button>
                 <button className="btn btn-lg no-bg svg-icon sm no-padding ">
                     <span className="svg-icon-base ">
                         <TargetIcon/>
                     </span>
-                    Flight Status
+                    <span className="text animated">
+                        Flight Status
+                    </span>
+
                 </button>
                 <button className="btn btn-lg no-bg svg-icon sm no-padding ">
                     <span className="svg-icon-base">
                         <BagIcon/>
                     </span>
-                    My Profile
+                    <span className="text animated">
+                        My Profile
+                    </span>
                 </button>
             </div>
         </div>
