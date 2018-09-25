@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
-
-
-
+// eslint-disable-next-line 
+import TravellingIcon from '-!svg-react-loader?!../../../assets/images/svgs/travelling-icon.svg';
+// eslint-disable-next-line 
+import MapsIcon from '-!svg-react-loader?!../../../assets/images/svgs/maps-icon.svg';
+// eslint-disable-next-line 
+import TargetIcon from '-!svg-react-loader?!../../../assets/images/svgs/target-icon.svg';
+// eslint-disable-next-line 
+import BagIcon from '-!svg-react-loader?!../../../assets/images/svgs/bag-icon.svg';
 
 
 import './menu.css'
@@ -16,21 +21,29 @@ class Menu extends Component {
       
             <div className="menu-navigation-itens ">
                 <button className="btn btn-lg no-bg no-padding -invert">
-                    <span className="svg-icon-base md travelling-icon"></span>
-                    Árvore
+                    <span className="svg-icon-base ">
+                        <TravellingIcon/>
+                    </span>
+                    Book Flights
                     
                 </button>
                 <button className="btn btn-lg no-bg svg-icon sm no-padding -invert">
-                    <span className="svg-icon-base md map-icon"></span>
-                    Gustavo
+                    <span className="svg-icon-base">
+                        <MapsIcon/>
+                    </span>
+                    Map View
                 </button>
                 <button className="btn btn-lg no-bg svg-icon sm no-padding -invert">
-                    <span className="svg-icon-base md target-icon"></span>
-                        Central de Trocas
+                    <span className="svg-icon-base ">
+                        <TargetIcon/>
+                    </span>
+                    Flight Status
                 </button>
                 <button className="btn btn-lg no-bg svg-icon sm no-padding -invert">
-                    <span className="svg-icon-base md bag-icon"></span>
-                        Dicas
+                    <span className="svg-icon-base">
+                        <BagIcon/>
+                    </span>
+                    My Profile
                 </button>
             </div>
         </div>
