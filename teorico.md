@@ -51,7 +51,7 @@
 
       
         O mais recomendado eu não sei ao certo.
-        Para requisições em serviços, eu gosto de trabalhar com Funções assíncronas ( async function adicionar1(x) {} ) escrevendo promisses em cadeias;
+        Para requisições em serviços, eu gosto de trabalhar com Funções assíncronas ( async function add(x) {} ) escrevendo promisses em cadeias;
 
     
 
@@ -65,10 +65,10 @@
         Eu não entendi muito bem a pergunta, vou tentar explicar o que sei sobre carregamento de imagens:
         - para favicons, utilizamos a tag <link/> informando o tipo da imagem e o caminho de carregamento (href);
         - <img/> para imagens e SVGs que poderão ser imprimidas; 
-        - background-images, utilizando sprites e posicionando  na página atráves do eixo X e Y;
+        - background-images, utilizando sprites e posicionando  na página através do eixo X e Y;
         - SVGs, podemos fazer de várias formas: 
             - como <img/>
-            - Inline (com o código imbutido no html) - Ideal para trabalhar 
+            - Inline (com o código embutido no html) - Ideal para trabalhar 
             - Bg-imgs com Sprites
 
         De todas as várias formas que citei acima, eu prefiro trabalhar com SVGs. Embora gere um pouco mais de trabalho, o ganho no tamanho dos arquivos finais é superior a qualquer outra forma. O ideal é trabalhar com bgs, porém isso pode ser relativo ao Layout proposto pela aplicação, principalmente se houver transições de cores e animações.
@@ -103,9 +103,9 @@
 
 
     
-        Os Watchers criam uma espécie de looping nas diretivas e componentes, que podem ficar ouvindo e esperando resultado o tempo inteiro. Isso, normalmente, quebram os serviços que podem nem voltar a funcionar sem o usuário dar um reload na página;
+        Os Watchers criam uma espécie de looping nas diretivas e componentes, que podem ficar ouvindo e esperando resultado o tempo inteiro. Isso, normalmente, quebra os serviços que podem nem voltar a funcionar sem o usuário dar um reload na página;
 
-        Pode-se passar novos "valores" como parametros através de um Link e, ao gerar uma condição para saber se o valor passado é diferente do antigo, poderá dar ínicio ao funcionamento do componente.
+        Pode-se passar novos "valores" como parâmetros através de um Link e, ao gerar uma condição para saber se o valor passado é diferente do antigo, poderá dar ínicio ao funcionamento do componente.
 
     
 
@@ -114,7 +114,7 @@
 
 
     
-        Não sei ao certo, mas acredito que seja pelo fato dos escopos criarem um tipo de cópia do parametro passado. 
+        Não sei ao certo, mas acredito que seja pelo fato dos escopos criarem um tipo de cópia do parâmetros passado. 
         Para que isso não aconteça, utilizamos a definição scope: true ao gerar a diretiva
     
     
@@ -138,7 +138,7 @@
 
 
     
-        Eu utilizaria o SASS com variavéis, mixins, uma arquitetura que me desse a possibilidade de organização de layout (smacss por exemplo) e uma boa organização dos códigos.
+        Eu utilizaria o SASS com variáveis, mixins, uma arquitetura que me desse a possibilidade de organização de layout (smacss por exemplo) e uma boa organização dos códigos.
 
     
 
@@ -147,8 +147,8 @@
 
 
        
-        Depedendo do projeto, a utilização de LIBS e FW com extrutura para sites e aplicações responsivas (Bootstrap/Foundation).
-        Na "unha": utilização de media queries, Media Types, unidades de medidas dinamicas e adaptaveis(REM, VW, %) e o Sass para deixar tudo mais dinamico.
+        Dependendo do projeto, a utilização de LIBS e FW com estrutura para sites e aplicações responsivas (Bootstrap/Foundation).
+        Na "unha": utilização de media queries, Media Types, unidades de medidas dinâmicas e adaptáveis (REM, VW, %) e o Sass para deixar tudo mais dinamico.
     
 
 
@@ -157,9 +157,9 @@
 
     
         Eu uso o SMACSS, OOCSS e BEM;
-        - SMACSS pela organização de arquivos, arquitetura, criação de estados e layouts específicos e customisavéis.
+        - SMACSS pela organização de arquivos, arquitetura, criação de estados e layouts específicos e customizáveis.
         - OOCSS pela possibilidade de escrever menos e reaproveitar classes;
-        - BEM pela organização, nomeclatura proposta que facilita o entendimento das classes e estilos;
+        - BEM pela organização, nomemclatura proposta que facilita o entendimento das classes e estilos;
 
         Como estou estudando React, eu acabei utilizado mais o OOCSS e BEM e menos o SMACSS por não sentir tanta necessidade deste último. 
     
@@ -245,7 +245,7 @@ async function doSomethingAsync(options) {
 }
 ```
 
-        Ambos são assícronos, a diferença é que um eu uso uma promisse e necessita utilizar o ```.then()``` e no async ```await```
+        Ambos são assíncronos, a diferença é que um eu uso uma promisse e necessita utilizar o ```.then()``` e no async ```await```
 
 ---
 
@@ -257,4 +257,4 @@ async function doSomethingAsync(options) {
 
 6\) Cite as principais diferenças entre um componente e uma diretiva no AngularJS.
 
-        Diretivas e Componentes são coisas similares. A diferença é que o Componente surgiu como forma de tratar peguenos problemas ocasionados nas diretivas; data binds, problemas em tratar o DOM e escopos isolados.
+        Diretivas e Componentes são coisas similares. A diferença é que o Componente surgiu como forma de tratar pequenos problemas ocasionados nas diretivas; data binds, problemas em tratar o DOM e escopos isolados.
