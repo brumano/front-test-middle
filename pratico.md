@@ -13,7 +13,19 @@ console.log(array1.last()) //9
 const array2 = []
 console.log(array2.last()) //undefined
 ```
+```
+    Array.prototype.last = function() {
+	    if(!this.length) return undefined;
+	    else return this[this.length-1];
+    }
 
+    const array1 = [1,2,3,4,5,6,7,8,9]
+    console.log(array1.last()) //9
+
+    const array2 = []
+    console.log(array2.last()) //undefined
+
+```
 ---
 
 2\) Melhore a função a seguir:
@@ -49,7 +61,24 @@ function getTransactions() {
 ```
 
 ```js
-// Resposta
+ ... 
+                if (!response.data.error) {
+                    const transactions = response.data
+
+                    var _transactions = []
+
+                    var _transactions = transactions.filter( function( transaction ) {
+                            return transaction.realizada;
+                        } ).map(function(transMap) {
+    						return {
+                                id: transMap.id,
+                                value:transMap.valor,
+                                type: transMap.valor < 0 ? 'transference' : 'deposit',
+                            };
+						});
+
+                    resolve(_transactions)
+                }
 ```
 
 ---
@@ -61,10 +90,10 @@ function getTransactions() {
 <img src="{{item.img}}">
 ```
 
-[Problemas]
+        Caso o item não tenha sido carregado, a imagem ira gerar um erro no Angular.
 
 ```html
-<!-- correção -->
+    <img ng-if="item" src="{{item.img}}">
 ```
 
 3.2)
@@ -76,10 +105,15 @@ function getTransactions() {
 </body>
 ```
 
-[Problemas]
+        Acredito que o problema a falta do ng-app, o uso do brackets ao invés do bind e a falta do ng-view.
 
 ```html
-<!-- correção -->
+        <html ng-app="Application">
+            <body ng-controller="PageCtrl">
+                <h1 ng-bind="page.mainTitle"></h1>
+                <div ng-view></div>
+            </body>
+        </html>
 ```
 
 3.3)
@@ -111,10 +145,22 @@ function HomeCtrl($scope) {
 
 ```
 
-[Problemas]
+        Nãe é interessante passar todo o escopo como um paramêtro, o ideal é passar somente a váriavel ou realizar programações funcionais (eu prefiro esta segunda). 
 
 ```js
-//correção
+        function HomeCtrl(foo) {
+            foo = 'bar'
+        }
+
+        ou 
+        
+        function HomeCtrl() {
+            return 'bar'
+        }
+        $scope.foo = HomeCtrl()
+
+
+
 ```
 
 ---
